@@ -1,12 +1,19 @@
-var hora = 18;
+var Agora = new Date();
+
+var hora = parseInt(
+    Agora.toLocaleString("pt-BR", {
+        timeZone: "America/Sao_Paulo",
+        hour: "2-digit",
+        hour12: false
+    })
+);
 
 console.log("Agora são exatamente " + hora + " horas.");
 
 if (hora <= 12) {
-    console.log("tenha um otimo dia");
+    console.log("Tenha um ótimo dia");
 } else if (hora <= 18) {
-    console.log("tenha uma otima tarde");
+    console.log("Tenha uma ótima tarde");
 } else {
-    console.log("tenha uma otima noite");
+    console.log("Tenha uma ótima noite");
 }
-
